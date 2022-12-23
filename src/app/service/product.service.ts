@@ -10,6 +10,7 @@ import { Product } from '../Model/product.model';
   providedIn: 'root'
 })
 export class ProductService {
+  
   private baseUrl = '';    //serverURL;
 
   constructor(private http: HttpClient) {}
@@ -28,5 +29,9 @@ export class ProductService {
 
   getProducts(): Observable<ProductResponse> {
     return this.http.get<ProductResponse>(this.baseUrl + 'api/getproducts');
+  }
+  getProductById(id: any): Observable<ProductResponse>{
+    return this.http.get<ProductResponse>('${this.baseUrl}api/getproductbyid/${id}');
+
   }
 }

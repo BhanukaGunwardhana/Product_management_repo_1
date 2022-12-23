@@ -31,20 +31,25 @@
           <p *ngIf="product.quantity > 50">Sufficient inventory</p>
         </td>
         <td>
+          <a [routerLink]="['/showproduct-component',product.id]">
+            <button
+            type="button"
+            [disabled]="rowIndex != i"
+            class="btn-xs icon"
+          >
+           ViewProduct
+          </button>
+          
+          </a>
+         <!-- <a [routerLink]="['/addproduct-component',product]"></a>
           <button
             type="button"
             [disabled]="rowIndex != i"
             class="btn-xs icon"
           >
-            <i class="fa fa-eye"></i>
-          </button>
-          <button
-            type="button"
-            [disabled]="rowIndex != i"
-            class="btn-xs icon"
-          >
-            <i class="fa fa-pencil-square-o"></i>
-          </button>
+            Update
+          </button>-->
+          
         </td>
       </tr>
     </tbody>

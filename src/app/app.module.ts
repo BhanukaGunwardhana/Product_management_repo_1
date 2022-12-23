@@ -12,6 +12,7 @@ import { HttpClient,HttpClientModule} from '@angular/common/http';
 //import { ViewproductComponent } from './components/viewproduct/viewproduct.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { TableProductComponent } from './components/table-product/table-product.component';
+import { ShowproductComponent } from './components/showproduct/showproduct.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TableProductComponent } from './components/table-product/table-product.
     ProductComponent,
     ProductComponent,
     AddProductComponent,
-    TableProductComponent
+    TableProductComponent,
+    ShowproductComponent
   ],
   imports: [
     BrowserModule,

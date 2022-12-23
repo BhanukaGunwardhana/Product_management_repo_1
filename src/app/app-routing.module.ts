@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ViewproductComponent } from './components/viewproduct/viewproduct.component';
+import { ShowproductComponent } from './components/showproduct/showproduct.component';
 
-const routes: Routes = [{path: 'viewproduct-component/:productname',component: ViewproductComponent}];
+
+const routes: Routes = [{path: '/showproduct-component:id',component: ShowproductComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
