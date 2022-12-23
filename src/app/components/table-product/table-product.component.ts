@@ -11,7 +11,7 @@ export class TableProductComponent implements OnInit {
   @Output() boolvaluevent=new EventEmitter();
   public rowIndex!: number;
   @Input() productarray: any
-  @Input() showdetails: any
+  
   public show_table:boolean | undefined;
 
   constructor() { }

@@ -10,7 +10,7 @@ import { Product } from '../Model/product.model';
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'https://host1.open.uom.lk/';
+  private baseUrl = '';    //serverURL;
 
   constructor(private http: HttpClient) {}
   
@@ -20,13 +20,13 @@ export class ProductService {
 
   addProduct(product: Product): Observable<AddProductResponse> {
     return this.http.post<AddProductResponse>(
-      this.baseUrl + 'api/products',
+      this.baseUrl + 'api/addproducts',
       product,
       this.httpOptions
     );
   }
 
   getProducts(): Observable<ProductResponse> {
-    return this.http.get<ProductResponse>(this.baseUrl + 'api/products');
+    return this.http.get<ProductResponse>(this.baseUrl + 'api/getproducts');
   }
 }

@@ -46,6 +46,9 @@ export class AddProductComponent implements OnInit {
     this.submitevent.emit();
 
   }
+  canceliingProductForm(){
+    this.productFrom.reset();
+  }
   
 
 }

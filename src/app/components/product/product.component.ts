@@ -10,59 +10,7 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-/*public rowindex: number | undefined ;
-isLoading: boolean =false;
-showAddproduct: boolean=false;
-showHiedit : boolean=false;
-updatedrow! : Product;*/
 
-//constructor(private hiService:ProductService, private router : Router) { }
-
-  /*ngOnInit(): void {
-    //this.getProduct();
-  }
-  
-  public products: Product[] = [];
-  
-  isloading(){
-    alert(this.isLoading);
-  }
-  
-  hideaddproduct() {
-    this.showAddproduct=false;
-    }
-  showaddproduct() {
-    this.showAddproduct=true;
-    this.showHiedit=false;
-    }
-    showhiedit(){
-      this.showHiedit=true;
-      this.showAddproduct=false;
-    }
-    hidehieditparent(){
-      this.showHiedit=false;
-    }
-  selectProduct(value: number,product : Product) {
-      this.rowindex=value;
-      this.updatedrow=product;
-
-    }
-  refresh(){
-        //throw new Error('Method not implemented.');
-        this.getProduct();
-    }
-  getProduct(){
-    
-        this.isLoading=true;
-        this.hiService.getProducts().subscribe((res)=>{
-          this.products=res.data;
-          this.isLoading=false;
-        })
-        
-      }
-  navigatetonextpage(product : Product){
-        this.router.navigate(['/viewproduct-component',product.productname]);
-      }*/
       showAddProduct!: boolean;
       isLoading: boolean = false;
       showtable: boolean = false;
