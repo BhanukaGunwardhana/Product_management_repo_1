@@ -1,6 +1,6 @@
 import { Product } from "./product.model";
 
 export interface ProductResponse {
-  message : string;
+  //message : string;
   data : Product[];
   }

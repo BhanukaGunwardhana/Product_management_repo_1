@@ -31,11 +31,11 @@
         </div>
    
       </section>
-      <section class="col-md-5" *ngIf="showAddProduct && !showtable">
-        <app-add-product (submitevent)= getProducts()></app-add-product>
+      <section class="col-md-5" *ngIf="showAddProduct || boolupdate">
+        <app-add-product (submitevent)= "getProducts()", [boolupdate_addproduct]="boolupdate",[idForUpdateProduct_addproduct]="idForUpdateProduct_product" ></app-add-product>
       </section>
       <section *ngIf="showtable && !showAddProduct">
-        <app-table-product [productarray]="products", (boolvaluevent)=disabletablecomponent()></app-table-product>
+        <app-table-product [productarray]="products", (boolvaluevent)="disabletablecomponent()", (boolvalueupdate)="enableupdate($event)"></app-table-product>
       </section>
     </div>
   </div>

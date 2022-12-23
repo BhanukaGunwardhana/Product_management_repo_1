@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/Model/product.model';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-table-product',
@@ -8,13 +9,16 @@ import { Product } from 'src/app/Model/product.model';
 })
 export class TableProductComponent implements OnInit {
 
+
   @Output() boolvaluevent=new EventEmitter();
+  @Output() boolvalueupdate=new EventEmitter();
   public rowIndex!: number;
+  
   @Input() productarray: any
   
   public show_table:boolean | undefined;
 
-  constructor() { }
+  constructor(private productservice: ProductService) { }
 
   ngOnInit() {
   }
@@ -26,4 +30,15 @@ export class TableProductComponent implements OnInit {
   public closetable(){
     this.boolvaluevent.emit();
   }
+  enableupdating(id :any) {
+    this.boolvalueupdate.emit(id);
+    }
+  deleteProduct(id:any){
+    this.productservice.deleteProduct(id).subscribe(((res)=> {
+      
+    }));
+
+
+  }
+  
 }

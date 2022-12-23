@@ -14,6 +14,8 @@ export class ProductComponent implements OnInit {
       showAddProduct!: boolean;
       isLoading: boolean = false;
       showtable: boolean = false;
+      boolupdate: boolean | undefined
+      idForUpdateProduct_product: any
     
       constructor(private productService: ProductService) {}
     
@@ -50,6 +52,10 @@ export class ProductComponent implements OnInit {
       }
       disabletablecomponent(){
         this.showtable=false;
+      }
+      enableupdate($event: any){
+        this.idForUpdateProduct_product=$event
+        this.boolupdate=true
       }
   
 

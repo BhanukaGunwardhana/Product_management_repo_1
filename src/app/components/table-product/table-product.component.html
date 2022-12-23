@@ -41,14 +41,25 @@
           </button>
           
           </a>
-         <!-- <a [routerLink]="['/addproduct-component',product]"></a>
+          <!--<a [routerLink]="['/addproduct-component',product]"></a>-->
           <button
             type="button"
             [disabled]="rowIndex != i"
             class="btn-xs icon"
+            (click)="enableupdating(product.id)"
           >
             Update
-          </button>-->
+          </button>
+          <button 
+            type="button" 
+            [disabled]="rowIndex !=i" 
+            class="btn-xs icon"
+            (click)="deleteProduct(product.id)"
+            >
+            Delete
+          
+          
+          </button>
           
         </td>
       </tr>
